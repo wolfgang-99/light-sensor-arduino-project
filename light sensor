@@ -1,0 +1,21 @@
+int led = 12;
+void setup()
+{
+Serial.begin(9600);
+}
+
+void loop()
+{
+ int data= analogRead (A5);
+  Serial.println (data);
+  delay (1000);
+ if (data <= 50)
+  {
+  digitalWrite(led, HIGH);
+  delay(100); 
+ } 
+  else
+  {
+   digitalWrite(led, LOW); 
+  }  
+}
